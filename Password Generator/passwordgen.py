@@ -35,7 +35,7 @@ def promptForRerun():
 def generatePassword(length):
     global validPasswordCharacters
     generatedPassword = ''.join(random.choice(validPasswordCharacters) for _ in range(length))
-    printGeneratedPassword(generatedPassword)
+    return generatedPassword
 
 #def: getPasswordLength
 def getPasswordLength():
@@ -121,6 +121,7 @@ def main():
         print("No valid combination of characters can be made from selected input. Please try again!")
         main()
 
-    generatePassword(passwordLength)
+    generatedPassword = generatePassword(passwordLength)
+    printGeneratedPassword(generatedPassword)
 
 main()
