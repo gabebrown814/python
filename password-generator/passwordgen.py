@@ -4,7 +4,6 @@ import string
 
 #globals
 validPasswordCharacters = ""
-colors = {'BOLD': '\033[1m', 'END': '\033[0m'}
 
 #def: generateValidPasswordString
 def generateValidPasswordString(lowercaseFlag, uppercaseFlag, numberFlag, specialCharFlag):
@@ -20,7 +19,7 @@ def generateValidPasswordString(lowercaseFlag, uppercaseFlag, numberFlag, specia
 
 #def: printGeneratedPassword
 def printGeneratedPassword(generatedPassword):
-    print('Password generated! Here is the result:\n' + colors['BOLD'] + generatedPassword + colors['END'])
+    print('Password generated! Here is the result:\n' + generatedPassword)
     promptForRerun()
 
 #def: promptForRerun
